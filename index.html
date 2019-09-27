@@ -1,12 +1,150 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
     <head>
-        <title>Redirecting to LinkedIn...</title>
+        <!-- Google analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35698287-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        <script type = "text/javascript">
-            window.location.replace("https://www.linkedin.com/in/cernec1999/");
+            gtag('config', 'UA-35698287-5');
         </script>
+
+        <!-- SEO Stuff -->
+        <meta charset = "utf-8">
+        <title>Christopher Cerne | Computer Science Student</title>
+        <meta name = "description" content = "Christopher Cerne is a computer science student, cyber security nerd, and published writer.">
+        <link rel = "canonical" href = "https://cerne.xyz" />
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
+
+        <!-- FontAwesome Kit -->
+        <script src = "https://kit.fontawesome.com/616992053c.js" crossorigin = "anonymous"></script>
+
+        <!-- Make the site responsive -->
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- All other style -->
+        <link rel = "stylesheet" href = "style/main.css">
     </head>
+
     <body>
+
+        <div class = "d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm">
+            <h5 class = "my-0 mr-md-auto font-weight-normal">cerne.xyz</h5>
+            <!--<nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Features</a>
+                <a class="p-2 text-dark" href="#">Enterprise</a>
+                <a class="p-2 text-dark" href="#">Support</a>
+                <a class="p-2 text-dark" href="#">Pricing</a>
+            </nav>-->
+            <!--<a class="btn btn-outline-primary" href="#">Sign up</a>-->
+        </div>
+
+        <div class="container mt-5 overflow-hidden bg-light" id = "me-container">
+            <div class = "row">
+                <div class = "col-md-6">
+                    <img src = "img/cerne-headshot-transparent.png" class = "img-fluid p-2" alt = "Christopher Cerne Headshot">
+                </div>
+                <div class = "col-md-6 p-5">
+                    <h5 class = "display-5">Just a small brief on</h5>
+                    <h1 class = "display-5 font-weight-bold">CHRISTOPHER CERNE</h1>
+                    <p class = "lead">
+                        Computer Science student at Virginia Tech. Cyber Security nerd. Published journalist. What's not to love?
+                    </p>
+
+                    <a class = "btn btn-primary btn-lg" href = "https://linkedin.com/in/cernec1999" role = "button">Connect</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container">
+            <h1 class = "mt-5">About</h1>
+            <p class = "lead">I am a hard-working, enthusiastic and self-directed college student eager to add value to a company while expanding my knowledge of computer science and engineering.</p>
+        </div>
+
+        <div class = "container">
+            <h1 class = "mt-5 mb-5">Interests</h1>
+            <div class = "row interests">
+                <div class="col-lg-4">
+                    <img src = "img/cerne-coding.png" class = "rounded-circle interest-img" width = "140" height = "140"></img>
+                    <h2>Computer Science</h2>
+                    <p>I have had passions in Computer Science since I was in grade school. Since then, I've created my own websites, won programming competitions, and started studying Computer Science at Virginia Tech.</p>
+                    <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- source location: https://pixabay.com/illustrations/hacking-cybercrime-cybersecurity-3112539/ -->
+                    <img src = "img/pixabay-cyber.png" class = "rounded-circle interest-img" width = "140" height = "140"></img>
+                    <h2>Cyber Security</h2>
+                    <p>I am specifically interested in offensive security research. I joined the Virginia Tech Cyber Security club and learned the basics of vulnerability research. Since joining, I've found numerous 0-day vulnerabilities in embedded devices.</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <img src = "img/cerne-outdoors.jpg" class = "rounded-circle interest-img" width = "140" height = "140"></img>
+                    <h2>Outdoors</h2>
+                    <p>I am passionate about the environment and the outdoors. I love going on hikes and bike rides around the Blacksburg area. More recently, I've gotten into caving after joining the <a class = "text-primary" href = "https://vpicave.club">VPI Cave Club</a>. I currently run the website for this club.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class = "pt-md-5 border-top p-3 p-md-5 m-md-3">
+            <div class = "row">
+                <div class = "col-8 col-md">
+                <ul class = "list-unstyled text-small">
+                    <li>
+                        © Christopher Cerne 2019
+                    </li>
+                </ul>
+                </div>
+                <div class = "col-8 col-md">
+                    <h5>Contact</h5>
+                    <ul class = "list-unstyled text-small">
+                        <li>
+                            <a class = "text-primary" href="#"><i class = "fas fa-paper-plane"></i> <span id = "econtact">chris (AT) cerne (DOT) xyz</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class = "col-8 col-md">
+                    <h5>Social</h5>
+                    <ul class = "list-unstyled text-small">
+                        <li><a class = "text-primary" href = "https://github.com/cernec1999"><i class = "fab fa-github"></i> cernec1999</a></li>
+                        <li><a class = "text-primary" href = "https://linkedin.com/in/cernec1999"><i  class = "fab fa-linkedin"></i> cernec1999</a></li>
+                        <li><a class="text-primary" href="https://twitter.com/cernec1999"><i  class = "fab fa-twitter"></i> cernec1999</a></li>
+                    </ul>
+                </div>
+
+                <div class = "col-8 col-md">
+                    <h5>Business</h5>
+                    <ul class = "list-unstyled text-small">
+                        <!--<li><a class="text-primary" href="https://twitter.com/cernec1999"><i  class = "fab fa-twitter"></i> cernec1999</a></li>-->
+                        <li><a class = "text-primary" href = "res/resume-rev-1.pdf"><i class = "fas fa-file"></i> Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- More Bootstrap content -->
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
+
+        <!-- Prevent crawlers from spamming by obfuscating email -->
+        <script type = "text/javascript">
+            var name = "chris";
+            var domain = "cerne";
+            var tld = "xyz";
+
+            var mail = name + String.fromCharCode(64) + domain + String.fromCharCode(46) + tld;
+
+            var link = "mail" + "to" + ":" + mail;
+            var alink = "<a href = \"" + link  + "\">" + mail + "</a>";
+            document.getElementById("econtact").innerHTML = alink;
+        </script>
 
     </body>
 </html>
