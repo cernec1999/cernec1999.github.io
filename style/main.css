@@ -2,6 +2,10 @@ body {
     background-color: white;
 }
 
-#me-container {
+.interests {
+    text-align: center;
+}
+
+.interest-img {
     
 }
