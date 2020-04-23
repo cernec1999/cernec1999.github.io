@@ -1,17 +1,46 @@
-<?xml version = "1.0" encoding = "UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
-        <loc>https://cerne.xyz/</loc>
-        <lastmod>2019-09-27T18:09:54+00:00</lastmod>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://cerne.xyz/res/resume-rev-1.pdf</loc>
-        <lastmod>2019-09-27T18:09:54+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://cerne.xyz/</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/trophies.html</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/portfolio.html</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/res/resume-rev-1.pdf</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-8797.html</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-8798.html</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/reports/report_juplink.pdf</loc>
+  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
 </urlset>
