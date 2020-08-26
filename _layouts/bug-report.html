@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- Google analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35698287-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-35698287-5');
+        </script>
+
+        <!-- SEO Stuff -->
+        <meta charset = "utf-8">
+        <title>Christopher Cerne | {{ page.cveid }}</title>
+        <meta name = "description" content = "Christopher Cerne is a computer science student, cyber security nerd, and published writer.">
+        <link rel = "canonical" href = "https://cerne.xyz" />
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
+
+        <!-- FontAwesome Kit -->
+        <script src = "https://kit.fontawesome.com/616992053c.js" crossorigin = "anonymous"></script>
+
+        <!-- Make the site responsive -->
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+        {% include navbar.html %}
+
+        <div class = "container">
+            <h1 class = "mt-5">{{ page.cveid }}</h1>
+            {{ content }}
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>

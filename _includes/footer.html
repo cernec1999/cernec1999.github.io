@@ -1,0 +1,53 @@
+<footer class = "pt-md-5 border-top p-3 p-md-5 m-md-3">
+    <div class = "row">
+        <div class = "col-8 col-md">
+        <ul class = "list-unstyled text-small">
+            <li>
+                Christopher Cerne © {{ 'now' | date: "%Y" }}
+            </li>
+        </ul>
+        </div>
+        <div class = "col-8 col-md">
+            <h5>Contact</h5>
+            <ul class = "list-unstyled text-small">
+                <li>
+                    <a class = "text-primary" href="#"><i class = "fas fa-paper-plane"></i> <span id = "econtact">chris (AT) cerne (DOT) xyz</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class = "col-8 col-md">
+            <h5>Social</h5>
+            <ul class = "list-unstyled text-small">
+                <li><a class = "text-primary" href = "https://github.com/cernec1999"  target = "_blank"><i class = "fab fa-github"></i> cernec1999</a></li>
+                <li><a class = "text-primary" href = "https://linkedin.com/in/cernec1999"  target = "_blank"><i  class = "fab fa-linkedin"  target = "_blank"></i> cernec1999</a></li>
+                <li><a class="text-primary" href="https://twitter.com/cernec1999"  target = "_blank"><i  class = "fab fa-twitter"></i> cernec1999</a></li>
+            </ul>
+        </div>
+
+        <div class = "col-8 col-md">
+            <h5>Business</h5>
+            <ul class = "list-unstyled text-small">
+                <!--<li><a class="text-primary" href="https://twitter.com/cernec1999"><i  class = "fab fa-twitter"></i> cernec1999</a></li>-->
+                <li><a class = "text-primary" href = "res/resume-rev-1.pdf" target = "_blank"><i class = "fas fa-file"></i> Resume</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- More Bootstrap content -->
+<script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
+
+<!-- Prevent crawlers from spamming by obfuscating email -->
+<script type = "text/javascript">
+    var name = "chris";
+    var domain = "cerne";
+    var tld = "xyz";
+
+    var mail = name + String.fromCharCode(64) + domain + String.fromCharCode(46) + tld;
+
+    var link = "mail" + "to" + ":" + mail;
+    var alink = "<a href = \"" + link  + "\">" + mail + "</a>";
+    document.getElementById("econtact").innerHTML = alink;
+</script>
