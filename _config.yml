@@ -1,5 +1,5 @@
 title: cerne.xyz
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://cerne.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-
+repository: cernec1999/cernec1999.github.io
 permalink: /:categories/:title
