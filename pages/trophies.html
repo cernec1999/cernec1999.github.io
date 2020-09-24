@@ -1,0 +1,59 @@
+---
+title: Trophies
+---
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body>
+        {% include navbar.html %}
+        <div class = "container">
+            <h1 class = "mt-5">Bug Trophies</h1>
+            <p class = "lead">Here are a list of security vulnerabilities that I've found outside of work. Other vulnerabilities may be hidden due to non-disclosure policies.</p>
+        </div>
+
+        <div class = "container table-responsive">
+            <table class="table">
+                <thead>
+                    <th scope = "col">Year</th>
+                    <th scope = "col">CVE-ID</th>
+                    <th scope = "col">Product</th>
+                    <th scope = "col">Vulnerability</th>
+                    <th scope = "col">Details</th>
+                </thead>
+                <tbody>
+                    {% assign dates = site.categories.bugs | group_by: 'date' | sort: 'name' %}
+                    {% for date in dates %}
+                        {% assign sorted = date.items | sort: "title" %}
+                        {% for item in sorted %}
+                            <tr>
+                                <td>{{ item.year }}</td>
+                                {% if item.cveid %}
+                                <td><a href = "https://cve.mitre.org/cgi-bin/cvename.cgi?name={{item.cveid}}.html">{{ item.cveid }}</a></td>
+                                {% else %}
+                                <td>N/A</td>
+                                {% endif %}
+                                {% if item.product_link %}
+                                <td><a href="{{ item.product_link }}">{{ item.product }}</a></td>
+                                {% else %}
+                                <td>{{ item.product }}</td>
+                                {% endif %}
+                                <td>{{ item.vulnerability }}</td>
+                                {% if item.publish %}
+                                <td><a href="{{ item.url }}">Bug Report</a></td>
+                                {% else %}
+                                <td>N/A</td>
+                                {% endif %}
+                                <td></td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
