@@ -18,6 +18,14 @@
         <meta name = "description" content = "Christopher Cerne is a computer science student, cyber security nerd, and published writer.">
         <link rel = "canonical" href = "https://cerne.xyz" />
 
+        <!-- Temporary fix, later switch to stylesheet -->
+        <style>
+            p img {
+                /* make img responsive */
+                width: 100%;
+            }
+        </style>
+
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
 
@@ -35,6 +43,19 @@
             <h1 class = "mt-5">{{ page.cveid }}</h1>
             {{ content }}
         </div>
+
+        <!-- Silly hack to add table class to table -->
+        <!-- Will remove once adding bootstrap to npm -->
+        <script>
+        window.onload = function() {
+            var tables = document.getElementsByTagName("table"),
+                len = tables !== null ? tables.length : 0,
+                i = 0;
+            for (i; i < len; i++) {
+                tables[i].className += " table"; 
+            }
+}
+        </script>
 
         {% include footer.html %}
     </body>
