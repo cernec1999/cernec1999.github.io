@@ -4,43 +4,69 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
 <url>
   <loc>https://cerne.xyz/</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/trophies.html</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/pages/trophies.html</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/portfolio.html</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/pages/portfolio.html</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/res/resume-rev-1.pdf</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/res/resume-rev-2.pdf</loc>
+  <lastmod>2020-09-24T16:05:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/bugs/CVE-2020-8797.html</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/bugs/CVE-2020-8797</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/bugs/CVE-2020-8798.html</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/bugs/CVE-2020-8798</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://cerne.xyz/bugs/reports/report_juplink.pdf</loc>
-  <lastmod>2020-04-23T03:33:34+00:00</lastmod>
+  <loc>https://cerne.xyz/bugs/CVE-2020-12123</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-12124</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-12125</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-12126</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/bugs/CVE-2020-12127</loc>
+  <lastmod>2020-09-24T16:05:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cerne.xyz/assets/reports/report_juplink.pdf</loc>
+  <lastmod>2020-09-24T16:05:39+00:00</lastmod>
   <priority>0.51</priority>
 </url>
-
-
+<url>
+  <loc>https://cerne.xyz/assets/reports/report_wavlink.pdf</loc>
+  <lastmod>2020-09-24T16:05:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
 </urlset>
