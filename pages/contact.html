@@ -1,0 +1,36 @@
+---
+title: Bug Reports
+---
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body>
+        {% include navbar.html %}
+        <div class = "container">
+            <h1 class = "mt-5">Contact</h1>
+            <p class = "lead">The best way to contact me is via email. My email address is <span id = "con">chris (AT) cerne (DOT) xyz.</span>.</p>
+            <p class = "lead">PGP public key: <a href = "{{ "/assets/pgp/cerne.xyz.asc" | relative_url }}" target = "_blank">cerne.xyz.asc</a></p>
+            <p class = "lead">PGP fingerprint: <code>594273006b35645f011f06e3145108f80b25e5ea</code></p>
+            
+        </div>
+        {% include footer.html %}
+    </body>
+
+    <!-- Main page scripts -->
+    <script src = "{{ "assets/js/main.js" | relative_url }}"></script>
+
+    <!-- Prevent crawlers from spamming by obfuscating email -->
+    <script type = "text/javascript">
+        {
+            let mail = generateEmail();
+
+            let link = "mail" + "to" + ":" + mail;
+            let alink = "<a href = \"" + link  + "\">" + mail + "</a>";
+            document.getElementById("con").innerHTML = alink;
+        }
+    </script>
+</html>

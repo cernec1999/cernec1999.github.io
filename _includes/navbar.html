@@ -1,6 +1,9 @@
 <div class = "d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm">
     <h5 class = "my-0 mr-md-auto font-weight-normal">cerne.xyz</h5>
     <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="{{"/pages/contact.html" | relative_url }}">Contact</a>
+    </nav>
+    <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="{{"/pages/trophies.html" | relative_url }}">Bug Reports</a>
     </nav>
     <nav class="my-2 my-md-0 mr-md-3">
@@ -10,7 +13,7 @@
         <a class="p-2 text-dark" href="{{"/pages/portfolio.html" | relative_url }}">Writing Portfolio</a>
     </nav>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class = "p-2 text-dark" href = "{{ "/res/" | append: site.resume | relative_url }}" target = "_blank">Resume</a>
+        <a class = "p-2 text-dark" href = "{{ "/assets/res/" | append: site.resume | relative_url }}" target = "_blank">Resume</a>
     </nav>
     <a class="btn btn-outline-primary" href="{{"/" | relative_url }}">Home</a>
 </div>
