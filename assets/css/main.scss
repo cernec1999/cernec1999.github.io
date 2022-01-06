@@ -1,8 +1,58 @@
 ---
 ---
 
-body {
-    background-color: white;
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: #212121;
+    }
+
+    .cerne-contrast {
+        background-color: #f8f9fa;
+    }
+
+    .cerne-navbar-link {
+        color: #212121;
+    }
+
+    pre {
+        background-color: #f8f9fa;
+        color: #149414;
+    }
+
+    th, tr {
+        color: #212529;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212121;
+        color: #f8f9fa;
+    }
+
+    .cerne-contrast {
+        background-color: #282828;
+    }
+
+    .cerne-navbar-link {
+        color: #f8f9fa;
+    }
+
+    pre {
+        background-color: #282828;
+        color: #149414;
+    }
+
+    th, tr {
+        color: #f8f9fa;
+    }
+
+    .card {
+        background-color: #282828;
+        color: #f8f9fa;
+        border: 1px solid #ffffff;
+    }
 }
 
 p img {
