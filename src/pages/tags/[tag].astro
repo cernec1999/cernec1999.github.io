@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({data}) => !data.draft);
+  const shelves = await getCollection('shelves');
+  const tags = new Set<string>();
+  posts.forEach((p)=>p.data.tags.forEach((t:string)=>tags.add(t)));
+  shelves.forEach((s)=>tags.add(s.data.tag));
+  return [...tags].map((tag)=>({ params:{ tag }, props:{ tag } }));
+}
+const { tag } = Astro.props;
+const posts = (await getCollection('blog', ({data}) => !data.draft && data.tags.includes(tag))).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf());
+const shelf = (await getCollection('shelves')).find((s)=>s.data.tag===tag);
+const label = tag.replace(/-/g,' ');
+---
+<Base title={label} description={`Posts tagged ${label} on stalactech.`}>
+  <div class="wrap">
+    <h1 class="posttitle" style="text-transform:capitalize">{shelf ? shelf.data.title : label}</h1>
+    {shelf && (<p style="color:var(--muted);max-width:60ch">{shelf.data.blurb}</p>)}
+    {posts.length ? (
+      <div class="postlist" style="margin-top:22px">{posts.map((p)=>(<PostCard post={p}/>))}</div>
+    ) : (
+      <div class="empty" style="margin-top:22px"><b>First write-up in progress.</b><br/>Nothing is published under “{label}” yet. It will show up here automatically as soon as a post is tagged <code>{tag}</code> — follow the <a href="/rss.xml">RSS feed</a> to catch it.</div>
+    )}
+  </div>
+</Base>
