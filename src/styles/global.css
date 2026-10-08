@@ -53,5 +53,5 @@ html[data-theme='dark'] .astro-code, html[data-theme='dark'] .astro-code span{co
 footer.site{border-top:1px solid var(--border);margin-top:64px;padding:26px 0 40px;color:var(--muted);font-size:14px}
 .empty{border:1px dashed var(--border);border-radius:14px;padding:26px;color:var(--muted);background:var(--surface)}
 input.searchbox{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:16px}
-.motif{display:block;margin:26px auto 0;opacity:.55}
+.motif{display:block;margin:26px auto 0;opacity:.92;height:auto}
 @media(max-width:640px){.nav{gap:14px}.nav a.link.hideS{display:none}}
