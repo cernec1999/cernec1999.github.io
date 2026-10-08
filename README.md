@@ -12,7 +12,7 @@ title: "Post title"
 date: 2026-10-08
 description: "One-line summary for cards, RSS, and search."
 tags: ["vulnerability-research"]
-# series: "Graal on Switch"   # optional; enables prev/next in series
+# series: "Vulnerability Research"   # optional; enables prev/next in series
 draft: false
 ---
 
