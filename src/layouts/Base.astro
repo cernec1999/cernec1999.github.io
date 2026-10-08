@@ -11,6 +11,16 @@ const pageTitle = title === 'stalactech' ? 'stalactech | research notes' : `${ti
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{pageTitle}</title>
 <meta name="description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="stalactech" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+<meta property="og:image" content="https://stalactech.com/brand/og-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@stalactech" />
+<meta name="twitter:creator" content="@stalactech" />
+<meta name="twitter:image" content="https://stalactech.com/brand/og-card.png" />
 <link rel="icon" href="/favicon.svg" />
 <link rel="alternate" type="application/rss+xml" title="stalactech" href="/rss.xml" />
 <script is:inline>(()=>{try{const t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();</script>
@@ -21,13 +31,14 @@ const pageTitle = title === 'stalactech' ? 'stalactech | research notes' : `${ti
   <a class="brand" href="/"><img src="/brand/logo-mark.svg" width="22" height="22" alt="" aria-hidden="true" /> stalactech</a>
   <a class="link hideS" href="/blog">Blog</a>
   <a class="link hideS" href="/about">About</a>
+  <a class="link hideS" href="/now">Now</a>
   <span class="sp"></span>
   <a class="link" href="/search">Search</a>
   <a class="link" href="/rss.xml">RSS</a>
   <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Theme</button>
 </nav></div></header>
 <main><slot /></main>
-<footer class="site"><div class="wide">stalactech | research notes by Chris Cerne. <a href="/about">About</a> · <a href="/resume">Resume</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, loaded only when opened.</div></footer>
+<footer class="site"><div class="wide">stalactech | research notes by Chris Cerne. <a href="/about">About</a> · <a href="/resume">Resume</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a> · <a href="https://x.com/stalactech">X</a> · <a href="/now">Now</a> · <a href="/.well-known/security.txt">security.txt</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, indexed at build time.</div></footer>
 <script is:inline>document.getElementById('themeToggle')?.addEventListener('click',()=>{const h=document.documentElement;const t=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}});</script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+# How to report a security issue to Chris Cerne (stalactech.com)
+# This covers the site itself, anything published here, and work Chris has released.
+Contact: mailto:contact@ccerne.com
+Expires: 2027-10-08T04:00:00.000Z
+Preferred-Languages: en
+Canonical: https://stalactech.com/.well-known/security.txt
+Policy: https://stalactech.com/about
