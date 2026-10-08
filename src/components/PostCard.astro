@@ -1,0 +1,9 @@
+---
+const { post } = Astro.props;
+const d = post.data.date.toISOString().slice(0,10);
+---
+<a class="post" href={`/blog/${post.id}`}>
+  <div class="meta"><span>{d}</span>{post.data.tags.map((t:string)=>(<span class="tag">{t}</span>))}</div>
+  <b>{post.data.title}</b>
+  <p>{post.data.description}</p>
+</a>
