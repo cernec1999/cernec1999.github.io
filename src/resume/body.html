@@ -1,74 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Christopher Cerne | Resume</title>
-<meta name="description" content="Christopher Cerne, Security Engineer at Meta. Vulnerability research, red team work, and application security.">
-<style>
-  /* ---------- web-first resume, A4 sheet ----------
-     Screen: the resume renders as a paper sheet at true A4 ratio (210 x 297 mm),
-     centered on a quiet backdrop. Print / PDF: @page A4, the sheet IS the page.
-     Single source of truth: edit this file, re-run ./build-pdf.sh. */
-  :root{
-    --ink:#1a1d21; --muted:#5b6470; --accent:#d96c00; --link:#1a5276; --rule:#e8c39a;
-    --bg:#e9edf1; --sheet:#ffffff;
-    --font:"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-    --serif:Georgia,"Times New Roman",Times,serif;
-    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{background:var(--bg);font-family:var(--serif);color:var(--ink);
-       -webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .sheet{
-    width:210mm;min-height:297mm;margin:10mm auto;padding:16mm 17mm 14mm;
-    background:var(--sheet);box-shadow:0 2mm 8mm rgba(20,30,45,.18);
-  }
-  /* header / letterhead */
-  header{border-bottom:2.2pt solid var(--accent);padding-bottom:4mm;margin-bottom:5mm;break-inside:avoid}
-  h1{font-family:var(--font);font-size:26pt;line-height:1.05;margin:0;font-weight:700;letter-spacing:.2pt;color:var(--accent)}
-  .role{font-size:11.5pt;color:var(--accent);font-weight:600;margin:1.6mm 0 2.6mm}
-  .contact{font-size:9pt;color:var(--muted);display:flex;flex-wrap:wrap;gap:.4em 1.2em}
-  .contact a{color:var(--muted);text-decoration:none}
-  .contact a:hover{color:var(--accent);text-decoration:underline}
-  /* sections */
-  section{margin-bottom:5.4mm}
-  h2{font-size:10.5pt;letter-spacing:.4pt;color:var(--accent);break-after:avoid;
-     border-bottom:.7pt solid var(--accent);padding-bottom:1.2mm;margin:0 0 3mm}
-  .job{margin-bottom:4.2mm;break-inside:avoid}
-  .atomic{break-inside:avoid}
-  p{orphans:2;widows:2}
-  .job:last-child{margin-bottom:0}
-  .job-head{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
-  .org{font-weight:700;font-size:10.5pt}
-  .dates{font-size:9pt;color:var(--muted);white-space:nowrap}
-  .title{font-style:italic;font-size:9.5pt;color:#333a42;margin:.4mm 0 1.2mm}
-  p{font-size:9.3pt;line-height:1.52;margin:0 0 1.6mm}
-  ul{margin:0 0 1.6mm;padding-left:4.6mm}
-  li{font-size:9.3pt;line-height:1.45;margin-bottom:.8mm}
-  .skills{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1mm 6mm}
-  .skills div{font-size:9.3pt;line-height:1.5}
-  .small{font-size:8.7pt;color:var(--muted)}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 8mm}
-  a{color:var(--link)}
-  .toolbar{max-width:210mm;margin:6mm auto 0;display:flex;gap:10px;justify-content:space-between;align-items:center;padding:0 2mm}
-  .toolbar a{font-family:var(--font);font-size:10pt;background:#fff;border:1pt solid #c8d0d8;border-radius:6px;padding:6px 12px;color:#1a5276;text-decoration:none}
-  .toolbar a:hover{border-color:var(--accent);color:var(--accent)}
-  @media print{ .no-print{display:none!important} }
-  @media screen and (max-width:230mm){ .sheet{width:100%;margin:0;box-shadow:none} }
-  @page{size:A4;margin:14mm 15mm 12mm}
-  @media print{
-    body{background:#fff}
-    .sheet{margin:0;box-shadow:none;width:auto;min-height:auto;padding:0}
-  }
-</style>
-</head>
-<body>
-<nav class="toolbar no-print"><a href="https://stalactech.com/">← stalactech.com</a><a href="/resume.pdf" download>Download PDF</a></nav>
-<main class="sheet">
-
-  <header>
+<header>
     <h1>Christopher Cerne</h1>
     <div class="role">Security Engineer, Agent Data Optimization (ADO), Meta</div>
     <div class="contact">
@@ -206,7 +136,3 @@
       <p>United States Cybersecurity Magazine.</p>
     </div>
   </section>
-
-</main>
-</body>
-</html>
