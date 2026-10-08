@@ -1,0 +1,57 @@
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --surface2:#efefec; --text:#171a1f; --muted:#5b6470; --border:#e2e2dc; --accent:#0369a1;
+  color-scheme:light;
+}
+html[data-theme='dark']{
+  --bg:#0b0f14; --surface:#111823; --surface2:#0f1622; --text:#e6edf3; --muted:#9aa7b4; --border:#223044; --accent:#7dd3fc;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 ui-sans-system,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.wide{max-width:1060px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--border);background:color-mix(in srgb,var(--bg) 88%,transparent);position:sticky;top:0;backdrop-filter:blur(8px);z-index:10}
+.nav{display:flex;align-items:center;gap:22px;padding:14px 0}
+.brand{font-weight:800;letter-spacing:-.02em;color:var(--text);font-size:19px;display:flex;gap:9px;align-items:center}
+.brand svg{flex:none}
+.nav .sp{flex:1}
+.nav a.link{color:var(--muted);font-size:15px}
+button.toggle{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:14px}
+.hero{padding:56px 0 8px}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px}
+.hero p{color:var(--muted);font-size:19px;max-width:56ch;margin:0}
+h2.sec{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:44px 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{display:block;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--a,var(--accent));border-radius:14px;padding:18px;color:var(--text)}
+.card:hover{text-decoration:none;border-color:var(--a,var(--accent))}
+.card b{font-size:17px}
+.card p{color:var(--muted);font-size:14.5px;margin:8px 0 10px}
+.card .go{font-size:13.5px;color:var(--accent);font-weight:600}
+.postlist{display:grid;gap:12px}
+.post{display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;color:var(--text)}
+.post:hover{text-decoration:none;border-color:var(--accent)}
+.post b{font-size:18px}
+.post p{color:var(--muted);margin:6px 0 0;font-size:15px}
+.meta{color:var(--muted);font-size:13.5px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{border:1px solid var(--border);border-radius:999px;padding:1px 9px;font-size:12.5px;color:var(--muted);background:var(--surface2)}
+.byline{color:var(--muted);font-size:14.5px;margin:0 0 26px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+h1.posttitle{font-size:clamp(30px,5vw,42px);letter-spacing:-.025em;line-height:1.12;margin:34px 0 10px}
+article{font-size:17.5px}
+article p{margin:0 0 1.1em}
+article h2{letter-spacing:-.02em;margin:1.6em 0 .5em}
+article code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--surface2);padding:.12em .35em;border-radius:6px}
+article pre{padding:16px;border-radius:12px;overflow:auto;border:1px solid var(--border)}
+article pre code{background:none;padding:0}
+html[data-theme='dark'] .astro-code, html[data-theme='dark'] .astro-code span{color:var(--shiki-dark)!important;background-color:var(--shiki-dark-bg)!important;font-style:var(--shiki-dark-font-style)!important}
+.more{margin:48px 0 8px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
+.more h3{margin:0 0 12px;font-size:16px}
+.more ul{margin:0;padding-left:18px}
+.identity{margin:22px 0 0;color:var(--muted);font-size:14.5px;border-top:1px solid var(--border);padding-top:16px}
+footer.site{border-top:1px solid var(--border);margin-top:64px;padding:26px 0 40px;color:var(--muted);font-size:14px}
+.empty{border:1px dashed var(--border);border-radius:14px;padding:26px;color:var(--muted);background:var(--surface)}
+input.searchbox{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:16px}
+.motif{display:block;margin:26px auto 0;opacity:.55}
+@media(max-width:640px){.nav{gap:14px}.nav a.link.hideS{display:none}}
