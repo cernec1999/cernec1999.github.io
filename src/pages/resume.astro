@@ -5,11 +5,17 @@ import '../resume/resume.css';
 ---
 <Base title="Resume" description="Christopher Cerne, Security Engineer, Agent Data Optimization (ADO) at Meta.">
   <div class="wide">
-    <p style="margin:22px 0 4px"><a class="toggle" style="display:inline-block;padding:9px 16px" href="/resume.pdf" download>Download PDF</a></p>
+    <div class="resume-actions"><a class="dl-btn" href="/resume.pdf" download="christopher-cerne-resume.pdf">Download PDF</a></div>
     <div class="rsheet">
       <main class="sheet">
         <Fragment set:html={body} />
       </main>
     </div>
   </div>
+  <style>
+    .resume-actions{display:flex;justify-content:flex-end;margin:26px 0 14px}
+    .dl-btn{background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(20,16,12,.35)}
+    .dl-btn:hover{background:var(--link);text-decoration:none}
+    html[data-theme='dark'] .dl-btn{color:#1c1410}
+  </style>
 </Base>
