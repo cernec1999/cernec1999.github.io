@@ -20,7 +20,7 @@ if (post.data.series) {
 const related = all.filter((p)=>p.id!==post.id && p.data.tags.some((t:string)=>post.data.tags.includes(t))).slice(0,4);
 ---
 <Base title={post.data.title} description={post.data.description}>
-  <div class="wrap">
+  <div class="wide"><div class="readcol">
     <h1 class="posttitle">{post.data.title}</h1>
     <p class="byline"><span>Chris Cerne</span><span>·</span><span>{dateStr}</span><span>·</span><span>{mins} min read</span><span>·</span>{post.data.tags.map((t:string)=>(<a class="tag" href={`/tags/${t}`}>{t}</a>))}</p>
     <article data-pagefind-body data-pagefind-meta={`title:${post.data.title}`} data-pagefind-filter={`tags:${post.data.tags.join(',')}`}>
@@ -37,5 +37,5 @@ const related = all.filter((p)=>p.id!==post.id && p.data.tags.some((t:string)=>p
       </aside>
     )}
     <p class="identity">Chris Cerne — Security Engineer at Meta · <a href="/about">About</a> · <a href="/rss.xml">RSS</a> · <a href="https://github.com/cernec1999">GitHub</a></p>
-  </div>
+  </div></div>
 </Base>

@@ -16,7 +16,7 @@ const shelf = (await getCollection('shelves')).find((s)=>s.data.tag===tag);
 const label = tag.replace(/-/g,' ');
 ---
 <Base title={label} description={`Posts tagged ${label} on stalactech.`}>
-  <div class="wrap">
+  <div class="wide"><div class="readcol">
     <h1 class="posttitle" style="text-transform:capitalize">{shelf ? shelf.data.title : label}</h1>
     {shelf && (<p style="color:var(--muted);max-width:60ch">{shelf.data.blurb}</p>)}
     {posts.length ? (
@@ -24,5 +24,5 @@ const label = tag.replace(/-/g,' ');
     ) : (
       <div class="empty" style="margin-top:22px"><b>First write-up in progress.</b><br/>Nothing is published under “{label}” yet. It will show up here automatically as soon as a post is tagged <code>{tag}</code> — follow the <a href="/rss.xml">RSS feed</a> to catch it.</div>
     )}
-  </div>
+  </div></div>
 </Base>
