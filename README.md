@@ -47,6 +47,7 @@ The homepage renders one card per shelf, sorted by `order`. Each card links to `
 
 ```bash
 npm install
+npm run dev      # local preview
 npm run build    # astro build + pagefind --site dist
 ```
 
