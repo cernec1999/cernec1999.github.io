@@ -1,63 +1,96 @@
 ---
 import Base from '../layouts/Base.astro';
+const jobs = [
+  { org: "Meta", dates: "Nov 2025 to Present",
+    title: "Security Engineer, Agent Data Optimization (ADO), Jun 2026 to Present; Red Team X, Nov 2025 to Jun 2026",
+    body: "Security Engineer in Meta's Applied AI (AAI) / Agent Data Optimization (ADO) organization, focused on generating high-quality cybersecurity training data for LLMs. Previously on Red Team X, Meta's former offensive security research team." },
+  { org: "Stratum Security", dates: "Aug 2023 to Oct 2025",
+    title: "Senior Security Consultant",
+    body: "At Stratum Security, I provided staff augmentation for a major company, conducting security reviews of high-traffic, externally facing applications. Through manual code reviews, dynamic testing, and threat modeling, my work played a critical role in safeguarding the privacy and security of millions of users worldwide." },
+  { org: "Bishop Fox", dates: "Jan 2022 to Aug 2023",
+    title: "Security Consultant III",
+    body: "I helped Fortune 500 companies secure their networks by performing penetration tests and security reviews of internal and external applications." },
+  { org: "Independent Security Work", dates: "Jan 2019 to Present",
+    title: "Security Researcher",
+    body: "I independently identified and gained recognition for finding vulnerabilities in web applications and embedded devices. I wrote comprehensive bug reports and notified vendors under a 120-day disclosure policy. I am credited with finding CVE-2020-8797, CVE-2020-8798, CVE-2020-12123, CVE-2020-12124, CVE-2020-12125, CVE-2020-12126, and CVE-2020-12127. I engaged as a member of the prestigious Synack Red Team (SRT) and contributed to the Google Vulnerability Reward Program (VRP), successfully identifying and responsibly disclosing high-risk vulnerabilities." },
+  { org: "RedLattice", dates: "May 2019 to Aug 2020",
+    title: "Vulnerability Research Intern",
+    body: "In the first summer, I researched and found security vulnerabilities in various commonplace embedded devices and developed tooling to exploit those vulnerabilities. In the second summer, I gained experience with JavaScriptCore and V8 vulnerability research and worked with a team to find high-impact bugs." },
+  { org: "Virginia Tech IT Security Office", dates: "Sep 2019 to Dec 2020",
+    title: "Red Team Researcher",
+    body: "I evaluated the security of devices on the Virginia Tech network. I developed tooling to facilitate embedded device research. I found numerous high-impact vulnerabilities, notified impacted departments, and worked with them to mitigate the issue." },
+  { org: "CS @ Virginia Tech", dates: "Aug 2020 to May 2021",
+    title: "Undergraduate Teaching Assistant, CS 3214 (Computer Systems)",
+    body: "I worked under the Virginia Tech Computer Science Department, fulfilling 10 hours a week as an undergraduate TA, and helped students in one of the most challenging courses in the CS curriculum, Computer Systems. I learned how to isolate bugs in student code and effectively teach systems-level concepts. I became an expert in debugging in GDB and programming in low-level C." },
+  { org: "Focal Point Technologies", dates: "Jun 2017 to Aug 2018",
+    title: "IT Intern",
+    body: "In the first summer, I worked on a team to develop a mobile application from scratch. In the second summer, I led a team creating embedded systems to collect data." },
+];
+const leadership = [
+  { org: "eJPT: Junior Penetration Tester", dates: "Nov 2021", title: "eLearnSecurity",
+    body: "I passed the eJPT certification exam with a score of 95%." },
+  { org: "Cyber Security Club at Virginia Tech", dates: "Sep 2020 to May 2021", title: "Vice President",
+    body: "I organized events for the Cyber Security Club at Virginia Tech. I gave technical presentations, including a presentation on attacking embedded devices. I helped the club fundraise by acquiring sponsorships." },
+  { org: "Andor Assembly Competition: Second Place", dates: "Aug 2019", title: "",
+    body: "I singlehandedly represented Virginia Tech in the University of Nebraska's Andor Assembly Programming Competition. The competition focused on x86, ARM, and RISC assembly." },
+  { org: "\"The Smartphone of the Future\": First Place", dates: "Apr 2017", title: "IEEE",
+    body: "I won $500 from the Institute of Electrical and Electronics Engineers (IEEE) for developing a prototype of a smartphone with interchangeable parts. I gained experience in embedded device programming and hardware interfaces such as I2C or SPI." },
+];
 ---
 <Base title="Resume" description="Christopher Cerne, Security Engineer, Agent Data Optimization (ADO) at Meta.">
   <div class="wrap">
-    <h1 class="posttitle">Resume</h1>
-    <p class="byline"><span>Christopher Cerne</span><span>|</span><span>Security Engineer, Agent Data Optimization (ADO), Meta</span></p>
-    <p><a class="toggle" style="display:inline-block;padding:9px 16px" href="/resume.pdf" download>Download PDF</a></p>
+    <div class="resume-head">
+      <h1 class="posttitle">Christopher Cerne</h1>
+      <p class="rrole">Security Engineer, Agent Data Optimization (ADO), Meta</p>
+      <p class="rcontact">Arlington, VA · <a href="mailto:contact@ccerne.com">contact@ccerne.com</a> · <a href="https://www.linkedin.com/in/cernec1999/">LinkedIn</a> · <a href="https://github.com/cernec1999">GitHub</a></p>
+      <p><a class="toggle rdl" href="/resume.pdf" download>Download PDF</a></p>
+    </div>
 
-    <article>
+    <section class="rsec">
       <h2>Experience</h2>
-      <p><strong>Meta</strong> | Nov 2025 to Present<br/>
-      <em>Security Engineer, Agent Data Optimization (ADO), Jun 2026 to Present; Red Team X, Nov 2025 to Jun 2026</em><br/>
-      Security Engineer in Meta's Applied AI (AAI) / Agent Data Optimization (ADO) organization, focused on generating high-quality cybersecurity training data for LLMs. Previously on Red Team X, Meta's former offensive security research team.</p>
+      {jobs.map((j)=>(
+        <div class="rjob">
+          <div class="rjob-head"><span class="rorg">{j.org}</span><span class="rdates">{j.dates}</span></div>
+          <div class="rtitle">{j.title}</div>
+          <p>{j.body}</p>
+        </div>))}
+    </section>
 
-      <p><strong>Stratum Security</strong> | Aug 2023 to Oct 2025<br/>
-      <em>Senior Security Consultant</em><br/>
-      At Stratum Security, I provided staff augmentation for a major company, conducting security reviews of high-traffic, externally facing applications. Through manual code reviews, dynamic testing, and threat modeling, my work played a critical role in safeguarding the privacy and security of millions of users worldwide.</p>
-
-      <p><strong>Bishop Fox</strong> | Jan 2022 to Aug 2023<br/>
-      <em>Security Consultant III</em><br/>
-      I helped Fortune 500 companies secure their networks by performing penetration tests and security reviews of internal and external applications.</p>
-
-      <p><strong>Independent Security Work</strong> | Jan 2019 to Present<br/>
-      <em>Security Researcher</em><br/>
-      I independently identified and gained recognition for finding vulnerabilities in web applications and embedded devices. I wrote comprehensive bug reports and notified vendors under a 120-day disclosure policy. I am credited with finding CVE-2020-8797, CVE-2020-8798, CVE-2020-12123, CVE-2020-12124, CVE-2020-12125, CVE-2020-12126, and CVE-2020-12127. I engaged as a member of the prestigious Synack Red Team (SRT) and contributed to the Google Vulnerability Reward Program (VRP), successfully identifying and responsibly disclosing high-risk vulnerabilities.</p>
-
-      <p><strong>RedLattice</strong> | May 2019 to Aug 2020<br/>
-      <em>Vulnerability Research Intern</em><br/>
-      In the first summer, I researched and found security vulnerabilities in various commonplace embedded devices and developed tooling to exploit those vulnerabilities. In the second summer, I gained experience with JavaScriptCore and V8 vulnerability research and worked with a team to find high-impact bugs.</p>
-
-      <p><strong>Virginia Tech IT Security Office</strong> | Sep 2019 to Dec 2020<br/>
-      <em>Red Team Researcher</em><br/>
-      I evaluated the security of devices on the Virginia Tech network. I developed tooling to facilitate embedded device research. I found numerous high-impact vulnerabilities, notified impacted departments, and worked with them to mitigate the issue.</p>
-
-      <p><strong>CS @ Virginia Tech</strong> | Aug 2020 to May 2021<br/>
-      <em>Undergraduate Teaching Assistant, CS 3214 (Computer Systems)</em><br/>
-      I worked under the Virginia Tech Computer Science Department, fulfilling 10 hours a week as an undergraduate TA, and helped students in one of the most challenging courses in the CS curriculum, Computer Systems. I learned how to isolate bugs in student code and effectively teach systems-level concepts. I became an expert in debugging in GDB and programming in low-level C.</p>
-
-      <p><strong>Focal Point Technologies</strong> | Jun 2017 to Aug 2018<br/>
-      <em>IT Intern</em><br/>
-      In the first summer, I worked on a team to develop a mobile application from scratch. In the second summer, I led a team creating embedded systems to collect data.</p>
-
+    <section class="rsec">
       <h2>Technical Skills</h2>
-      <p>C, C++, Rust. Python 3. Java. x86, ARM, and MIPS assembly. Git. Linux kernel. Vulnerability research. Web development. Docker.</p>
+      <div class="rskills">
+        <span>C, C++, Rust</span><span>Python 3</span><span>Java</span>
+        <span>x86, ARM, MIPS assembly</span><span>Git</span><span>Linux kernel</span>
+        <span>Vulnerability research</span><span>Web development</span><span>Docker</span>
+      </div>
+    </section>
 
+    <section class="rsec">
       <h2>Education</h2>
-      <p><strong>Virginia Tech</strong> | 2017 to 2021<br/>
-      B.S. Computer Science, 3.75 GPA. Graduated in May 2021. Vice President of the Cyber Security Club (2020 to 2021). Webmaster of the VPI Cave Club (2019 to 2021). Brother of the Theta Tau professional fraternity.</p>
+      <div class="rjob">
+        <div class="rjob-head"><span class="rorg">Virginia Tech</span><span class="rdates">2017 to 2021</span></div>
+        <div class="rtitle">B.S. Computer Science, 3.75 GPA (graduated May 2021)</div>
+        <p>Vice President of the Cyber Security Club (2020 to 2021). Webmaster of the VPI Cave Club (2019 to 2021). Brother of the Theta Tau professional fraternity.</p>
+      </div>
+    </section>
 
-      <h2>Leadership, Awards, and Certifications</h2>
-      <p><strong>eJPT: Junior Penetration Tester</strong> (eLearnSecurity, Nov 2021). I passed the eJPT certification exam with a score of 95%.<br/>
-      <strong>Cyber Security Club at Virginia Tech: Vice President</strong> (Sep 2020 to May 2021). I organized events for the Cyber Security Club at Virginia Tech. I gave technical presentations, including a presentation on attacking embedded devices. I helped the club fundraise by acquiring sponsorships.<br/>
-      <strong>Andor Assembly Competition: Second Place</strong> (Aug 2019). I singlehandedly represented Virginia Tech in the University of Nebraska's Andor Assembly Programming Competition. The competition focused on x86, ARM, and RISC assembly.<br/>
-      <strong>"The Smartphone of the Future": First Place</strong> (IEEE, Apr 2017). I won $500 from the Institute of Electrical and Electronics Engineers (IEEE) for developing a prototype of a smartphone with interchangeable parts. I gained experience in embedded device programming and hardware interfaces such as I2C or SPI.</p>
+    <section class="rsec">
+      <h2>Leadership, Awards &amp; Certifications</h2>
+      {leadership.map((j)=>(
+        <div class="rjob">
+          <div class="rjob-head"><span class="rorg">{j.org}</span><span class="rdates">{j.dates}</span></div>
+          {j.title && <div class="rtitle">{j.title}</div>}
+          <p>{j.body}</p>
+        </div>))}
+    </section>
 
+    <section class="rsec">
       <h2>Publications</h2>
-      <p>"Security for College Freshmen." United States Cybersecurity Magazine, Aug 2017.</p>
-
-      <p style="margin-top:28px"><a class="toggle" style="display:inline-block;padding:9px 16px" href="/resume.pdf" download>Download PDF</a></p>
-    </article>
+      <div class="rjob">
+        <div class="rjob-head"><span class="rorg">"Security for College Freshmen"</span><span class="rdates">Aug 2017</span></div>
+        <p>United States Cybersecurity Magazine.</p>
+      </div>
+      <p style="margin-top:28px"><a class="toggle rdl" href="/resume.pdf" download>Download PDF</a></p>
+    </section>
   </div>
 </Base>
