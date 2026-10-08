@@ -45,7 +45,7 @@
 @media screen and (max-width:230mm){.rsheet .sheet{width:100%;margin:0;box-shadow:none}}
 @page{size:A4;margin:14mm 15mm 12mm}
 @media print{.rsheet{background:#fff}
-.rsheet .sheet{margin:0;box-shadow:none;width:auto;min-height:auto;padding:0}}
+.rsheet .sheet{margin:0;box-shadow:none;width:auto;min-height:auto;padding:0;background:#fff}}
 /* site embed overrides: fluid width inside the page layout, sheet sits on site bg */
 .rsheet{background:transparent}
 .rsheet .sheet{width:min(210mm,100%);min-height:0;margin:10px auto}
