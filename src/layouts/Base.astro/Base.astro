@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string; }
+const { title = 'stalactech', description = 'Research notes: language models, Graal on Switch, vulnerability research.' } = Astro.props;
+const pageTitle = title === 'stalactech' ? 'stalactech — research notes' : `${title} — stalactech`;
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="icon" href="/favicon.svg" />
+<link rel="alternate" type="application/rss+xml" title="stalactech" href="/rss.xml" />
+<script is:inline>(()=>{try{const t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();</script>
+
+</head>
+<body>
+<header class="site"><div class="wide"><nav class="nav">
+  <a class="brand" href="/"><svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 2h10l-1.8 10.2c-.4 2-1.1 3-2 4.6-.5.9-1 1.7-1.2 2.9-.2-1.2-.7-2-1.2-2.9-.9-1.6-1.6-2.6-2-4.6L11 2z" fill="currentColor"/></svg>stalactech</a>
+  <a class="link hideS" href="/tags/vulnerability-research">Vulnerability research</a>
+  <a class="link hideS" href="/about">About</a>
+  <span class="sp"></span>
+  <a class="link" href="/search">Search</a>
+  <a class="link" href="/rss.xml">RSS</a>
+  <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Theme</button>
+</nav></div></header>
+<main><slot /></main>
+<footer class="site"><div class="wide">stalactech — research notes by Chris Cerne. <a href="/about">About</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, loaded only when opened.</div></footer>
+<script is:inline>document.getElementById('themeToggle')?.addEventListener('click',()=>{const h=document.documentElement;const t=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}});</script>
+</body>
+</html>
