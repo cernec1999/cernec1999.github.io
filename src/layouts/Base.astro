@@ -2,7 +2,7 @@
 import '../styles/global.css';
 interface Props { title?: string; description?: string; }
 const { title = 'stalactech', description = 'Research notes: language models, Graal on Switch, vulnerability research.' } = Astro.props;
-const pageTitle = title === 'stalactech' ? 'stalactech — research notes' : `${title} — stalactech`;
+const pageTitle = title === 'stalactech' ? 'stalactech | research notes' : `${title} | stalactech`;
 ---
 <!doctype html>
 <html lang="en">
@@ -27,7 +27,7 @@ const pageTitle = title === 'stalactech' ? 'stalactech — research notes' : `${
   <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Theme</button>
 </nav></div></header>
 <main><slot /></main>
-<footer class="site"><div class="wide">stalactech — research notes by Chris Cerne. <a href="/about">About</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, loaded only when opened.</div></footer>
+<footer class="site"><div class="wide">stalactech | research notes by Chris Cerne. <a href="/about">About</a> · <a href="/resume">Resume</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, loaded only when opened.</div></footer>
 <script is:inline>document.getElementById('themeToggle')?.addEventListener('click',()=>{const h=document.documentElement;const t=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}});</script>
 </body>
 </html>
