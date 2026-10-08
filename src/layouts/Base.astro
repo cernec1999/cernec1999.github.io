@@ -40,6 +40,7 @@ const pageTitle = title === 'stalactech' ? 'stalactech | research notes' : `${ti
 </nav></div></header>
 <main><slot /></main>
 <footer class="site"><div class="wide">stalactech | research notes by Chris Cerne. <a href="/about">About</a> · <a href="/resume">Resume</a> · <a href="https://github.com/cernec1999">GitHub</a> · <a href="/rss.xml">RSS</a> · <a href="https://x.com/stalactech">X</a> · <a href="/now">Now</a> · <a href="/.well-known/security.txt">security.txt</a><br/>Built with Astro. Post pages ship 0 KB of framework JS; search is Pagefind, indexed at build time.</div></footer>
+<script is:inline>document.querySelectorAll('a[href^="http"]').forEach(a=>{try{if(new URL(a.href).hostname!==location.hostname){a.target='_blank';a.rel='noopener noreferrer';}}catch(e){}});</script>
 <script is:inline>document.getElementById('themeToggle')?.addEventListener('click',()=>{const h=document.documentElement;const t=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}});</script>
 </body>
 </html>
